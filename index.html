@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Private Circulation Check for Men Over 40 | Body After 40</title>
+<meta name="description" content="It's usually not in your head. Take the private 60-second circulation check.">
+<meta property="og:title" content="Private Circulation Check for Men Over 40 | Body After 40">
+<meta property="og:description" content="It's usually not in your head. Take the private 60-second circulation check.">
+<meta property="og:image" content="/og.png">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#16294a;--navy2:#203a63;--orange:#ff8a3d;--yel:#ffd54a;--cream:#fff4dd;--ink:#0d1a30;--teal:#5fb8a6;--bg:#f7f4ee;--muted:#5b6675;--accent:#e85a5a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--navy)}
+.disc{background:var(--ink);color:#cfd6e2;font-size:12.5px;text-align:center;padding:7px 14px;line-height:1.4}
+.disc a{color:#fff}
+header{background:var(--navy);color:var(--cream);padding:14px 20px}
+.brand{display:flex;align-items:center;gap:10px;max-width:680px;margin:0 auto;font:700 18px Poppins,sans-serif}
+.brand b{color:var(--orange)}
+.badge{width:34px;height:34px;border-radius:50%;background:var(--navy2);border:2px solid var(--teal);display:grid;place-items:center;font:800 14px Poppins;color:var(--orange)}
+main{max-width:680px;margin:0 auto;padding:0 20px 60px}
+.hero{background:var(--navy);color:var(--cream);margin:0 -20px;padding:26px 24px 34px;border-radius:0 0 28px 28px}
+.hero h1{font:800 clamp(27px,6.4vw,38px)/1.15 Poppins,sans-serif;margin:6px 0 12px}
+.hero h1 em{font-style:normal;color:var(--yel)}
+.hero p{margin:0 0 18px;color:#dfe5ef;font-size:17.5px}
+.kicker{display:inline-block;font:600 12.5px Poppins;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.btn{display:block;width:100%;border:3px solid var(--ink);background:var(--yel);color:var(--ink);font:700 19px Poppins,sans-serif;padding:16px 18px;border-radius:16px;cursor:pointer;text-align:center;text-decoration:none;box-shadow:0 5px 0 var(--ink);transition:transform .08s}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+.btn.orange{background:var(--orange)}
+.small{font-size:13.5px;color:var(--muted)}
+.hero .small{color:#aab6c8;text-align:center;margin-top:10px}
+.card{background:#fff;border:2px solid #e8e2d6;border-radius:20px;padding:22px;margin:22px 0}
+h2{font:700 24px/1.25 Poppins,sans-serif;margin:30px 0 10px}
+h3{font:700 19px Poppins,sans-serif;margin:0 0 8px}
+.pain{display:grid;gap:10px;margin:14px 0}
+.pain div{background:#fff;border-left:5px solid var(--accent);padding:12px 14px;border-radius:10px}
+/* quiz */
+#quiz{display:none}
+.prog{height:10px;background:#e8e2d6;border-radius:99px;overflow:hidden;margin:18px 0 6px}
+.prog i{display:block;height:100%;width:0;background:var(--orange);transition:width .3s}
+.qcount{font:600 13px Poppins;color:var(--muted)}
+.q h3{font-size:22px;line-height:1.3;margin:12px 0 16px}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:2px solid #ddd5c6;border-radius:14px;padding:14px 16px;margin:10px 0;font:500 17px Inter,sans-serif;cursor:pointer;color:var(--ink)}
+.opt:hover{border-color:var(--navy)}
+.opt.sel{border-color:var(--navy);background:#eef2f8}
+#loading{display:none;text-align:center;padding:60px 0}
+.spin{width:54px;height:54px;border:6px solid #e8e2d6;border-top-color:var(--orange);border-radius:50%;margin:0 auto 18px;animation:s 1s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+/* result */
+#result{display:none}
+.meter{background:#fff;border:2px solid #e8e2d6;border-radius:20px;padding:20px;margin:20px 0;text-align:center}
+.meter .lvl{font:800 30px Poppins;margin:4px 0}
+.bar{height:16px;border-radius:99px;background:linear-gradient(90deg,#5fb8a6,#ffd54a,#ff8a3d,#e85a5a);position:relative;margin:14px 4px 4px}
+.bar b{position:absolute;top:-7px;width:30px;height:30px;border-radius:50%;background:#fff;border:4px solid var(--ink);transform:translateX(-50%);transition:left 1s}
+.why li{margin:6px 0}
+.habit{display:flex;gap:12px;margin:12px 0}
+.habit span{flex:0 0 34px;height:34px;border-radius:50%;background:var(--navy);color:var(--yel);display:grid;place-items:center;font:700 16px Poppins}
+.prod{display:flex;gap:16px;align-items:center}
+.prod img{width:96px;height:auto;border-radius:12px}
+.packs{display:grid;gap:12px;margin:18px 0}
+.pack{position:relative;background:#fff;border:2px solid #ddd5c6;border-radius:18px;padding:16px 16px 14px;cursor:pointer}
+.pack.rec{border:3px solid var(--orange);box-shadow:0 6px 0 rgba(255,138,61,.25)}
+.pack .tag{position:absolute;top:-12px;right:14px;background:var(--orange);color:var(--ink);font:700 12px Poppins;padding:3px 10px;border-radius:99px;border:2px solid var(--ink)}
+.pack h4{margin:0;font:700 18px Poppins}
+.pack p{margin:4px 0 10px;font-size:15px;color:var(--muted)}
+.pack .btn{font-size:16px;padding:12px;box-shadow:0 4px 0 var(--ink)}
+.pack:not(.rec) .btn{background:#fff}
+.guar{display:flex;gap:12px;align-items:flex-start;background:#eaf6f2;border-radius:16px;padding:14px 16px;font-size:15.5px}
+.steps li{margin:6px 0}
+footer{max-width:680px;margin:0 auto;padding:24px 20px 50px;font-size:12.5px;color:var(--muted);border-top:1px solid #e3ddd0}
+footer a{color:var(--muted)}
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(247,244,238,.96);border-top:1px solid #e3ddd0;display:none;z-index:9}
+.sticky .btn{max-width:640px;margin:0 auto;font-size:17px;padding:13px}
+</style>
+</head>
+<body>
+<div class="disc">Advertorial: we may earn a commission if you buy through links on this page, at no extra cost to you. <a href="about.html">Learn more</a></div>
+<header><div class="brand"><div class="badge">40</div><div>Body After <b>40</b></div></div></header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <span class="kicker" id="kicker"></span>
+    <h1 id="headline"></h1>
+    <p id="sub"></p>
+    <button class="btn" onclick="startQuiz()" id="startBtn">Take the 60-second check →</button>
+    <div class="small">5 quick questions · Free · Answers never leave your phone</div>
+  </section>
+
+  <div id="intro">
+    <h2 id="painTitle"></h2>
+    <div class="pain" id="painList"></div>
+    <div class="card">
+      <h3 id="mechTitle"></h3>
+      <p id="mechText" style="margin:0"></p>
+    </div>
+    <button class="btn orange" onclick="startQuiz()">Start the check →</button>
+  </div>
+
+  <!-- QUIZ -->
+  <section id="quiz">
+    <div class="prog"><i id="progBar"></i></div>
+    <div class="qcount" id="qcount"></div>
+    <div class="q" id="qbox"></div>
+  </section>
+
+  <!-- LOADING -->
+  <section id="loading">
+    <div class="spin"></div>
+    <h3 id="loadTxt">Analyzing your answers…</h3>
+  </section>
+
+  <!-- RESULT -->
+  <section id="result">
+    <h2 style="margin-top:24px">Your result</h2>
+    <div class="meter">
+      <div class="small" id="levelLabel"></div>
+      <div class="lvl" id="levelName"></div>
+      <div class="bar"><b id="marker" style="left:0%"></b></div>
+      <p id="levelText" style="margin:12px 0 0;text-align:left"></p>
+    </div>
+
+    <div class="card">
+      <h3>What your answers point to</h3>
+      <ul class="why" id="whyList"></ul>
+    </div>
+
+    <h2 id="habitsTitle"></h2>
+    <div id="habits"></div>
+
+    <div class="card" id="offer">
+      <span class="kicker" style="color:var(--orange)">What many readers add next</span>
+      <div class="prod" style="margin-top:8px">
+        <div>
+          <h3 id="prodName" style="font-size:24px"></h3>
+          <p id="prodDesc" style="margin:0"></p>
+        </div>
+      </div>
+      <p id="prodWhy" style="margin:14px 0 0"></p>
+
+      <h3 style="margin-top:22px" id="packTitle">Our suggestion for your result</h3>
+      <p class="small" id="packNote" style="margin:0"></p>
+      <div class="packs" id="packs"></div>
+
+      <div class="guar"><div style="font-size:26px">🛡️</div><div id="guarantee"></div></div>
+
+      <h3 style="margin-top:22px">What happens when you click</h3>
+      <ol class="steps" id="nextSteps"></ol>
+    </div>
+
+    <p class="small">These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Individual results vary. The self-check is for education only and is not a diagnosis. Talk to your doctor before starting a supplement, especially if you take medication or have a health condition.</p>
+  </section>
+</main>
+
+<div class="sticky" id="sticky"><a class="btn orange" id="stickyBtn" href="#">See the recommended option →</a></div>
+
+<footer>
+  <p><strong>Disclosure:</strong> Body After 40 is an independent publisher, not the manufacturer. Some links are affiliate links: if you buy, we may earn a commission at no extra cost to you. We don't create reviews or testimonials.</p>
+  <p><strong>Medical disclaimer:</strong> The content on this page is for general information only and is not medical advice. It does not replace a consultation with a qualified healthcare professional.</p>
+  <p><a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · © 2026 Body After 40</p>
+</footer>
+
+<script>
+/* ============================ CONFIG — edit here ============================ */
+var C = {
+ "key": "vj",
+ "hooks": {
+  "okay": {
+   "kicker": "For men over 40",
+   "title": "She said it's okay. <em>It's not okay.</em>",
+   "sub": "Take the private 60-second circulation check and find out what's really behind it. It's usually not in your head."
+  },
+  "tired": {
+   "kicker": "For men over 40",
+   "title": "She's not tired. <em>She's protecting your feelings.</em>",
+   "sub": "5 private questions to see whether blood flow is the real problem."
+  },
+  "half": {
+   "kicker": "For men over 40",
+   "title": "Feel like <em>half the man</em> you used to be?",
+   "sub": "A private 60-second check on the circulation signs most men never connect."
+  }
+ },
+ "painTitle": "If this sounds familiar, you're not alone",
+ "pains": [
+  "You've started going to bed late on purpose, waiting until she's asleep.",
+  "You have an excuse ready before anything can happen: early meeting, sore back, too much dinner.",
+  "She says it's fine, but you can tell she wonders if it's her.",
+  "You don't feel as confident as you used to, at home, at work, in the mirror."
+ ],
+ "mechTitle": "It's usually not in your head. It's blood flow.",
+ "mechText": "Performance depends on circulation. When the moment comes, your blood vessels release <strong>nitric oxide</strong>, a molecule that tells the vessel walls to relax so blood can flow in. After 40, nitric oxide production drops and the lining of the arteries gets stiffer. Less signal, less flow. Stress, poor sleep and alcohol make it worse. It's common, it's physical, and it's worth addressing.",
+ "questions": [
+  {
+   "q": "How old are you?",
+   "options": [
+    [
+     "Under 40",
+     0
+    ],
+    [
+     "40–49",
+     1,
+     "age"
+    ],
+    [
+     "50–59",
+     2,
+     "age"
+    ],
+    [
+     "60 or older",
+     2,
+     "age"
+    ]
+   ]
+  },
+  {
+   "q": "Compared with 5 years ago, how is your confidence in the bedroom?",
+   "options": [
+    [
+     "About the same",
+     0
+    ],
+    [
+     "A little lower",
+     1
+    ],
+    [
+     "Noticeably lower",
+     2,
+     "flow"
+    ],
+    [
+     "I avoid the moment",
+     3,
+     "flow"
+    ]
+   ]
+  },
+  {
+   "q": "How are your energy and drive during the day?",
+   "options": [
+    [
+     "Good",
+     0
+    ],
+    [
+     "Up and down",
+     1
+    ],
+    [
+     "Low most days",
+     2,
+     "energy"
+    ],
+    [
+     "Very low",
+     3,
+     "energy"
+    ]
+   ]
+  },
+  {
+   "q": "How would you describe your stress and sleep?",
+   "options": [
+    [
+     "Low stress, sleep well",
+     0
+    ],
+    [
+     "Some stress",
+     1
+    ],
+    [
+     "High stress or poor sleep",
+     2,
+     "stress"
+    ],
+    [
+     "Both, most weeks",
+     3,
+     "stress"
+    ]
+   ]
+  },
+  {
+   "q": "Do any of these apply to you?",
+   "options": [
+    [
+     "None of these",
+     0
+    ],
+    [
+     "I drink alcohol most evenings",
+     2,
+     "habits"
+    ],
+    [
+     "I sit most of the day",
+     2,
+     "habits"
+    ],
+    [
+     "I've been told my blood pressure or blood sugar is high",
+     3,
+     "doctor"
+    ]
+   ]
+  }
+ ],
+ "loading": [
+  "Analyzing your answers…",
+  "Checking common circulation patterns after 40…",
+  "Preparing your private result…"
+ ],
+ "levelLabel": "Your circulation signs",
+ "levels": [
+  {
+   "min": 0,
+   "name": "Mild",
+   "color": "#2f8f7c",
+   "pack": 1,
+   "text": "Your answers show only a few signs. Daily habits that protect your blood vessels usually make the biggest difference at this stage.",
+   "packWhy": "Circulation support builds up over weeks, so most men choose at least a 90-day supply."
+  },
+  {
+   "min": 40,
+   "name": "Moderate",
+   "color": "#d9822b",
+   "pack": 2,
+   "text": "Your answers match a pattern that's very common in men over 40: less confidence, lower drive and habits that affect blood flow. This is physical, not a character flaw.",
+   "packWhy": "With several signs at once, a longer 180-day plan gives your routine time to work, and it's usually the lowest price per bottle."
+  },
+  {
+   "min": 70,
+   "name": "Significant",
+   "color": "#d24b4b",
+   "pack": 2,
+   "text": "Your answers show many signs linked to circulation. Please also talk to your doctor: problems here can be an early signal of heart and blood-vessel health, and they're very treatable.",
+   "packWhy": "With this many signs, a 180-day plan gives you the most time to see change, usually at the lowest price per bottle."
+  }
+ ],
+ "flags": {
+  "age": "After 40, the body naturally makes less nitric oxide, the molecule that opens blood vessels.",
+  "flow": "Lower confidence in the bedroom is most often linked to blood flow, not to how you feel about your partner.",
+  "energy": "Low energy and drive often go together with lower testosterone and poorer circulation.",
+  "stress": "Stress hormones tighten blood vessels, and short sleep lowers testosterone, which is mostly made during deep sleep.",
+  "habits": "Regular alcohol and long hours sitting both reduce nerve signals and blood flow over time.",
+  "doctor": "High blood pressure or blood sugar directly affect blood vessels. Please mention these symptoms to your doctor.",
+  "_default": "Your answers don't show strong signs, but nitric oxide production still drops a little each decade after 40."
+ },
+ "habitsTitle": "3 habits that protect your circulation",
+ "habits": [
+  [
+   "Move every day",
+   "A brisk 20–30 minute walk is one of the best-studied ways to support blood vessel health."
+  ],
+  [
+   "Watch the evening drinks",
+   "Alcohol dulls the nerve signals that start the whole process."
+  ],
+  [
+   "Protect your sleep",
+   "7+ hours supports healthy testosterone, which is mostly produced during deep sleep."
+  ]
+ ],
+ "product": {
+  "name": "VigorJelly",
+  "code": "vj",
+  "url": "PASTE_VIGORJELLY_HOPLINK_HERE",
+  "desc": "A daily gummy supplement for men, designed to support healthy blood flow, energy and vitality.",
+  "why": "It's built around nutrients your body uses to support circulation and nitric oxide. Check the full ingredient list and amounts on the official page. Results vary from person to person. If you take blood-pressure or heart medication, ask your doctor before using any circulation supplement.",
+  "guarantee": "<strong>Money-back guarantee</strong> from the manufacturer, processed by ClickBank. Check the exact terms on the official page before ordering.",
+  "next": [
+   "The official VigorJelly page opens with a short presentation.",
+   "Choose the package you want there. Prices are shown on that page, and nothing is charged until you confirm.",
+   "Orders are processed securely by ClickBank and ship in discreet packaging."
+  ],
+  "cta": "Continue to the official page →",
+  "packs": [
+   {
+    "name": "1 bottle · 30 days",
+    "short": "1 bottle",
+    "code": "1",
+    "note": "To try it out. You'll need to reorder in a month."
+   },
+   {
+    "name": "3 bottles · 90 days",
+    "short": "3 bottles",
+    "code": "3",
+    "note": "Enough time for a new routine to settle in."
+   },
+   {
+    "name": "6 bottles · 180 days",
+    "short": "6 bottles",
+    "code": "6",
+    "note": "Longest plan, usually the lowest price per bottle."
+   }
+  ]
+ }
+};
+/* ======================================================================== */
+
+(function(){
+  var params = new URLSearchParams(location.search);
+  function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){return null;} }
+  function clean(s,n){ return (s||'').toLowerCase().replace(/[^a-z0-9]/g,'').slice(0,n); }
+  window.track = function(name){ try{ window.va('event',{name:name}); }catch(e){} };
+
+  // source (e.g. fb01dm) for ClickBank tid, remembered for return visits
+  var src = clean(params.get('src') || store(C.key+'_src') || 'direct', 14);
+  store(C.key+'_src', src);
+
+  // hook / headline variant (?h=...)
+  var h = params.get('h'); if(!C.hooks[h]) h = Object.keys(C.hooks)[0];
+  var hook = C.hooks[h];
+  document.getElementById('kicker').textContent = hook.kicker;
+  document.getElementById('headline').innerHTML = hook.title;
+  document.getElementById('sub').textContent = hook.sub;
+
+  document.getElementById('painTitle').textContent = C.painTitle;
+  document.getElementById('painList').innerHTML = C.pains.map(function(p){return '<div>'+p+'</div>';}).join('');
+  document.getElementById('mechTitle').textContent = C.mechTitle;
+  document.getElementById('mechText').innerHTML = C.mechText;
+
+  // ---------------- quiz ----------------
+  var qi = 0, score = 0, maxScore = 0, flags = [];
+  C.questions.forEach(function(q){ maxScore += Math.max.apply(null, q.options.map(function(o){return o[1];})); });
+
+  window.startQuiz = function(){
+    track('quiz_start');
+    document.getElementById('hero').style.display='none';
+    document.getElementById('intro').style.display='none';
+    document.getElementById('quiz').style.display='block';
+    window.scrollTo({top:0});
+    renderQ();
+  };
+  function renderQ(){
+    var q = C.questions[qi];
+    document.getElementById('progBar').style.width = (qi / C.questions.length * 100) + '%';
+    document.getElementById('qcount').textContent = 'Question ' + (qi+1) + ' of ' + C.questions.length;
+    var html = '<h3>'+q.q+'</h3>';
+    q.options.forEach(function(o,i){ html += '<button class="opt" onclick="answer('+i+',this)">'+o[0]+'</button>'; });
+    document.getElementById('qbox').innerHTML = html;
+  }
+  window.answer = function(i, el){
+    el.classList.add('sel');
+    var q = C.questions[qi], o = q.options[i];
+    score += o[1];
+    if(o[2]) flags.push(o[2]);
+    setTimeout(function(){
+      qi++;
+      if(qi < C.questions.length) renderQ(); else finish();
+    }, 220);
+  };
+
+  function finish(){
+    track('quiz_done');
+    document.getElementById('progBar').style.width='100%';
+    document.getElementById('quiz').style.display='none';
+    document.getElementById('loading').style.display='block';
+    var msgs = C.loading, k = 0, t = document.getElementById('loadTxt');
+    var iv = setInterval(function(){ k++; if(k<msgs.length) t.textContent = msgs[k]; }, 900);
+    t.textContent = msgs[0];
+    setTimeout(function(){ clearInterval(iv); showResult(); }, 900*msgs.length);
+  }
+
+  function showResult(){
+    document.getElementById('loading').style.display='none';
+    document.getElementById('result').style.display='block';
+    window.scrollTo({top:0});
+
+    var pct = Math.round(score / maxScore * 100);
+    var lvl = C.levels[0];
+    C.levels.forEach(function(l){ if(pct >= l.min) lvl = l; });
+    document.getElementById('levelLabel').textContent = C.levelLabel;
+    document.getElementById('levelName').textContent = lvl.name;
+    document.getElementById('levelName').style.color = lvl.color;
+    document.getElementById('levelText').innerHTML = lvl.text;
+    setTimeout(function(){ document.getElementById('marker').style.left = Math.max(4, Math.min(96, pct)) + '%'; }, 100);
+
+    var why = flags.map(function(f){ return C.flags[f]; }).filter(Boolean);
+    if(!why.length) why = [C.flags._default];
+    document.getElementById('whyList').innerHTML = why.map(function(w){return '<li>'+w+'</li>';}).join('');
+
+    document.getElementById('habitsTitle').textContent = C.habitsTitle;
+    document.getElementById('habits').innerHTML = C.habits.map(function(x,i){
+      return '<div class="habit"><span>'+(i+1)+'</span><div><strong>'+x[0]+'</strong><br>'+x[1]+'</div></div>'; }).join('');
+
+    // offer
+    var P = C.product;
+    document.getElementById('prodName').textContent = P.name;
+    document.getElementById('prodDesc').textContent = P.desc;
+    document.getElementById('prodWhy').innerHTML = P.why;
+    document.getElementById('guarantee').innerHTML = P.guarantee;
+    document.getElementById('nextSteps').innerHTML = P.next.map(function(n){return '<li>'+n+'</li>';}).join('');
+
+    var recIdx = lvl.pack;
+    document.getElementById('packNote').innerHTML = lvl.packWhy;
+    var html = '';
+    var order = [recIdx].concat(P.packs.map(function(_,i){return i;}).filter(function(i){return i!==recIdx;}).reverse());
+    order.forEach(function(i){
+      var pk = P.packs[i], rec = i===recIdx;
+      html += '<div class="pack'+(rec?' rec':'')+'">' + (rec?'<span class="tag">Suggested for your result</span>':'') +
+        '<h4>'+pk.name+'</h4><p>'+pk.note+'</p>' +
+        '<a class="btn" href="'+link(pk.code)+'" target="_blank" rel="sponsored noopener" onclick="track(\'click_'+pk.code+'\')">'+(rec? P.cta : 'Choose '+pk.short+' →')+'</a></div>';
+    });
+    document.getElementById('packs').innerHTML = html;
+
+    var sb = document.getElementById('stickyBtn');
+    sb.href = link(P.packs[recIdx].code);
+    sb.onclick = function(){ track('click_sticky'); };
+    document.getElementById('sticky').style.display='block';
+    store(C.key+'_done','1');
+  }
+
+  // ClickBank tid: source + product code + pack (max 24 chars), e.g. fb01dm + vj + 6
+  function link(pack){
+    var tid = (src + C.product.code + pack).slice(0,24);
+    var u = C.product.url;
+    if(!u || u.indexOf('PASTE')>-1) return 'javascript:alert(\'Affiliate link not set yet: edit CONFIG > product.url\')';
+    return u + (u.indexOf('?')>-1 ? '&' : '?') + 'tid=' + encodeURIComponent(tid);
+  }
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
