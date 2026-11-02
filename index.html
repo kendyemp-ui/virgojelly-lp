@@ -146,6 +146,7 @@ footer a{color:var(--muted)}
       <p class="small" id="packNote" style="margin:0"></p>
       <div class="packs" id="packs"></div>
 
+      <p id="dtcWrap" style="display:none;text-align:center;margin:0 0 16px"><a id="dtcLink" href="#" target="_blank" rel="sponsored noopener">Prefer to see the official presentation first? →</a></p>
       <div class="guar"><div style="font-size:26px">🛡️</div><div id="guarantee"></div></div>
 
       <h3 style="margin-top:22px">What happens when you click</h3>
@@ -326,13 +327,13 @@ var C = {
    "color": "#2f8f7c",
    "pack": 1,
    "text": "Your answers show only a few signs. Daily habits that protect your blood vessels usually make the biggest difference at this stage.",
-   "packWhy": "Circulation support builds up over weeks, so most men choose at least a 90-day supply."
+   "packWhy": "Circulation support builds up over weeks, so most men choose at least a 90-day supply (3 bottles)."
   },
   {
    "min": 40,
    "name": "Moderate",
    "color": "#d9822b",
-   "pack": 2,
+   "pack": 0,
    "text": "Your answers match a pattern that's very common in men over 40: less confidence, lower drive and habits that affect blood flow. This is physical, not a character flaw.",
    "packWhy": "With several signs at once, a longer 180-day plan gives your routine time to work, and it's usually the lowest price per bottle."
   },
@@ -340,7 +341,7 @@ var C = {
    "min": 70,
    "name": "Significant",
    "color": "#d24b4b",
-   "pack": 2,
+   "pack": 0,
    "text": "Your answers show many signs linked to circulation. Please also talk to your doctor: problems here can be an early signal of heart and blood-vessel health, and they're very treatable.",
    "packWhy": "With this many signs, a 180-day plan gives you the most time to see change, usually at the lowest price per bottle."
   }
@@ -372,37 +373,42 @@ var C = {
  "product": {
   "name": "VigorJelly",
   "code": "vj",
-  "url": "PASTE_VIGORJELLY_HOPLINK_HERE",
+  "url": "",
   "desc": "A daily gummy supplement for men, designed to support healthy blood flow, energy and vitality.",
   "why": "It's built around nutrients your body uses to support circulation and nitric oxide. Check the full ingredient list and amounts on the official page. Results vary from person to person. If you take blood-pressure or heart medication, ask your doctor before using any circulation supplement.",
-  "guarantee": "<strong>Money-back guarantee</strong> from the manufacturer, processed by ClickBank. Check the exact terms on the official page before ordering.",
+  "guarantee": "<strong>Money-back guarantee</strong> from the manufacturer. Check the exact terms on the official page before ordering.",
   "next": [
-   "The official VigorJelly page opens with a short presentation.",
-   "Choose the package you want there. Prices are shown on that page, and nothing is charged until you confirm.",
-   "Orders are processed securely by ClickBank and ship in discreet packaging."
+   "You'll go straight to the official store's secure checkout for the package you picked.",
+   "Review the price and details there. Nothing is charged until you confirm your order.",
+   "It ships in discreet packaging."
   ],
-  "cta": "Continue to the official page →",
+  "cta": "Get my recommended package →",
   "packs": [
    {
-    "name": "1 bottle · 30 days",
-    "short": "1 bottle",
-    "code": "1",
-    "note": "To try it out. You'll need to reorder in a month."
+    "name": "6 bottles · 180 days",
+    "short": "6 bottles",
+    "code": "6",
+    "url": "https://buygoods.com/secure/checkout.html?account_id=13212&product_codename=vig6b&redirect=aHR0cHM6Ly9iZy52aWdvcmplbGx5LmNvbS9mYS1mZTYtdmo=&aff_id=118&&subid5=b2lkPW9mZl8wMTA5NzMwJmFpZD1hZmYyMzQ5MDI4JnVpZD1ibF8yMjc0ODcw",
+    "note": "Longest plan, usually the lowest price per bottle."
    },
    {
     "name": "3 bottles · 90 days",
     "short": "3 bottles",
     "code": "3",
+    "url": "https://buygoods.com/secure/checkout.html?account_id=13212&product_codename=vig3b&redirect=aHR0cHM6Ly9iZy52aWdvcmplbGx5LmNvbS9mYi1mZTEyMy12ag==&aff_id=118&&subid5=b2lkPW9mZl8wMTA5NzMwJmFpZD1hZmYyMzQ5MDI4JnVpZD1ibF81NTM3MjMw",
     "note": "Enough time for a new routine to settle in."
    },
    {
-    "name": "6 bottles · 180 days",
-    "short": "6 bottles",
-    "code": "6",
-    "note": "Longest plan, usually the lowest price per bottle."
+    "name": "2 bottles · 60 days",
+    "short": "2 bottles",
+    "code": "2",
+    "url": "https://buygoods.com/secure/checkout.html?account_id=13212&product_codename=vig2b&redirect=aHR0cHM6Ly9iZy52aWdvcmplbGx5LmNvbS9mYi1mZTEyMy12ag==&aff_id=118&&subid5=b2lkPW9mZl8wMTA5NzMwJmFpZD1hZmYyMzQ5MDI4JnVpZD1ibF81MTQ5ODE5",
+    "note": "The smallest package available."
    }
-  ]
- }
+  ],
+  "dtc": "https://usevigorjelly.com/bg/dtc/?&subid5=b2lkPW9mZl8wMTA5NzMwJmFpZD1hZmYyMzQ5MDI4JnVpZD1ibF85MzQyNzc0"
+ },
+ "trackParam": "subid"
 };
 /* ======================================================================== */
 
@@ -512,6 +518,7 @@ var C = {
     });
     document.getElementById('packs').innerHTML = html;
 
+    if(P.dtc){ var dl=document.getElementById('dtcLink'); dl.href = linkUrl(P.dtc,'p'); dl.onclick=function(){track('click_dtc');}; document.getElementById('dtcWrap').style.display='block'; }
     var sb = document.getElementById('stickyBtn');
     sb.href = link(P.packs[recIdx].code);
     sb.onclick = function(){ track('click_sticky'); };
@@ -519,15 +526,20 @@ var C = {
     store(C.key+'_done','1');
   }
 
-  // ClickBank tid: source + product code + pack (max 24 chars), e.g. fb01dm + vj + 6
+  // tracking id = source + product code + pack, e.g. fb01dmab6
   function link(pack){
+    var pk = C.product.packs.filter(function(p){return p.code===pack;})[0] || {};
+    var u = pk.url || C.product.url;
+    if(!u || u.indexOf('PASTE')>-1) return "javascript:alert('Affiliate link not set yet: edit CONFIG')";
+    return linkUrl(u, pack);
+  }
+  function linkUrl(u, pack){
     var tid = (src + C.product.code + pack).slice(0,24);
-    var u = C.product.url;
-    if(!u || u.indexOf('PASTE')>-1) return 'javascript:alert(\'Affiliate link not set yet: edit CONFIG > product.url\')';
-    return u + (u.indexOf('?')>-1 ? '&' : '?') + 'tid=' + encodeURIComponent(tid);
+    return u + (u.indexOf('?')>-1 ? '&' : '?') + C.trackParam + '=' + encodeURIComponent(tid);
   }
 })();
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script src="https://unpkg.com/@beworke/pixel@latest/dist/browser/pixel.hwaffiliate-landing.global.js"></script>
 </body>
 </html>
